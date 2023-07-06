@@ -54,9 +54,9 @@ class Book(db.Model):
     id = db.Column(db.String, primary_key = True)
     title = db.Column(db.String(200), nullable = False)
     author = db.Column(db.String(150))
-    isbn = db.Column(db.String(20))
-    book_length = db.Column(db.String(4))
-    book_type = db.Column(db.String(20))
+    isbn = db.Column(db.String(100))
+    book_length = db.Column(db.String(100))
+    book_type = db.Column(db.String(100))
     user_token = db.Column(db.String, db.ForeignKey('user.token'), nullable = False)
 
     def __init__(self, title, author, isbn, book_length, book_type, user_token, id = ''):

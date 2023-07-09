@@ -35,7 +35,7 @@ def upgrade():
     sa.Column('title', sa.String(length=200), nullable=False),
     sa.Column('author', sa.String(length=150), nullable=True),
     sa.Column('isbn', sa.String(length=20), nullable=True),
-    sa.Column('book_length', sa.String(length=4), nullable=True),
+    sa.Column('book_length', sa.String(length=10), nullable=True),
     sa.Column('book_type', sa.String(length=20), nullable=True),
     sa.Column('user_token', sa.String(), nullable=False),
     sa.ForeignKeyConstraint(['user_token'], ['user.token'], ),
